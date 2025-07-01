@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Розрахунок вартості | HugRug</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/calc.js" defer></script>
+</head>
+<body>
+  <section class="section" id="calculator">
+    <div class="container">
+      <h2 class="section-title">Розрахунок вартості килима</h2>
+      <form id="calcForm">
+        <label>
+          Довжина (см):
+          <input type="number" name="length" required min="10">
+        </label>
+        <label>
+          Ширина (см):
+          <input type="number" name="width" required min="10">
+        </label>
+        <label>
+          <input type="checkbox" name="complex">
+          Складний малюнок (+50%)
+        </label>
+        <label>
+          <input type="checkbox" name="design">
+          Індивідуальний дизайн (+20%)
+        </label>
+        <label>
+          <input type="checkbox" name="edge">
+          Обметка країв (+200 грн)
+        </label>
+        <label>
+          <input type="checkbox" name="delivery">
+          Доставка (+300 грн)
+        </label>
+        <button type="submit">Порахувати</button>
+      </form>
+      <div id="calcResult"></div>
+    </div>
+  </section>
+</body>
+</html>

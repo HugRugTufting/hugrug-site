@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HugRug — Тафтингові килими</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <button id="theme-toggle" aria-label="Змінити тему">🌙</button>
+      <img src="images/logo.jpeg" alt="HugRug Logo" class="logo">
+      <h1 class="title">HugRug</h1>
+      <p class="subtitle">Унікальні тафтингові килими на замовлення</p>
+      <a href="https://www.tiktok.com/@hugrug" target="_blank" class="cta">Замовити в TikTok</a>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#works">Наші роботи</a>
+    <a href="calculator.html">Калькулятор</a>
+    <a href="#order">Як замовити</a>
+    <a href="contact.html">Контакти</a>
+    <a href="about.html">Про нас</a>
+  </nav>
+
+  <!-- Gallery -->
+  <section id="works" class="section fade-in">
+    <div class="container">
+      <h2 class="section-title">Наші роботи</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/superman.jpg" alt="Superman">
+          <p>Superman</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/homer.jpg" alt="Homer">
+          <p>Homer Simpson</p>
+        </div>
+        <div class="gallery-item">
+          <img src="images/anime.jpg" alt="Anime Girl">
+          <p>Anime Girl</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TikTok Embed -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Як ми створюємо килими</h2>
+      <blockquote class="tiktok-embed" cite="" data-video-id="" style="max-width: 605px;min-width: 325px;">
+        <section><a target="_blank" title="@hugrug" href="#">@hugrug</a></section>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Що кажуть наші клієнти</h2>
+      <blockquote>“Килим просто вау! Ідеально підійшов у кімнату.” — Олена</blockquote>
+      <blockquote>“Дякую за індивідуальний підхід! Дуже якісно.” — Андрій</blockquote>
+    </div>
+  </section>
+
+  <!-- Order Process -->
+  <section id="order" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Як замовити</h2>
+      <div class="steps">
+        <div class="step"><span>🎨</span><h3>1. Ідея</h3><p>Надсилаєш референс або свою ідею</p></div>
+        <div class="step"><span>💬</span><h3>2. Обговорення</h3><p>Погоджуємо деталі та ціну</p></div>
+        <div class="step"><span>🧵</span><h3>3. Виготовлення</h3><p>До 7 днів на створення</p></div>
+        <div class="step"><span>📦</span><h3>4. Доставка</h3><p>Нова Пошта по Україні</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <h2>Зв'язатися з нами</h2>
+      <p>Ми активні в соцмережах:</p>
+      <div class="social-links">
+        <a href="https://www.tiktok.com/@hugrug">TikTok</a>
+        <a href="https://www.instagram.com/hugrug.ua/">Instagram</a>
+        <a href="https://www.facebook.com/hug.rug.2025/">Facebook</a>
+      </div>
+      <p class="copyright">&copy; 2025 HugRug</p>
+    </div>
+  </footer>
+
+  <!-- Floating Instagram Button -->
+  <a href="https://www.instagram.com/hugrug.ua/" class="floating-btn" target="_blank" aria-label="Написати в Instagram">Instagram 📩</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script>
+    const tiktokVideos = [
+      "7516940734688136453",
+      "7508842243000634629",
+      "7502556678588468486",
+      "7521849080717249797",
+      "7521418279102074168",
+      "7509542516094520632",
+      "7501015018851421445",
+      "7509843810046774534"
+    ];
+
+    const randomId = tiktokVideos[Math.floor(Math.random() * tiktokVideos.length)];
+    const embedContainer = document.querySelector(".tiktok-embed");
+    embedContainer.setAttribute("data-video-id", randomId);
+    embedContainer.setAttribute("cite", `https://www.tiktok.com/@hugrug/video/${randomId}`);
+    embedContainer.innerHTML = `
+      <section>
+        <a target="_blank" title="@hugrug" href="https://www.tiktok.com/@hugrug/video/${randomId}">@hugrug</a>
+      </section>
+    `;
+    const script = document.createElement("script");
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  </script>
+
+</body>
+</html>
