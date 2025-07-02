@@ -16,11 +16,10 @@
   <!-- Стили -->
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/styles.css" />
-
- 
 </head>
-<body class="theme-dark">
-  <header class="header">
+
+<body>
+  <header class="header fade-in">
     <div class="container">
       <img src="logo.png" alt="HugRug Logo" class="logo" />
       <h1 class="title">HugRug</h1>
@@ -42,7 +41,31 @@
     <a href="#about">Про нас</a>
   </nav>
 
-  <section id="reviews" class="section">
+  <section id="gallery" class="section fade-in">
+    <div class="container">
+      <h2>Наші роботи</h2>
+      <p>Тут будуть приклади килимів, які ми вже створили. (Можна вставити галерею)</p>
+      <!-- <img src="gallery1.jpg"> ... -->
+    </div>
+  </section>
+
+  <section id="calculator" class="section light fade-in">
+    <div class="container">
+      <h2>Калькулятор вартості</h2>
+      <form>
+        <label>Розмір (см):</label><br />
+        <input type="text" name="size" placeholder="Наприклад 100x60" /><br />
+        <label>Тип дизайну:</label><br />
+        <select name="design">
+          <option value="simple">Простий</option>
+          <option value="detailed">Детальний</option>
+        </select><br />
+        <button class="btn coral" type="submit">Розрахувати</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="reviews" class="section fade-in">
     <div class="container">
       <h2>Що кажуть наші клієнти</h2>
       <div class="reviews">
@@ -52,7 +75,7 @@
     </div>
   </section>
 
-  <section id="how" class="section light">
+  <section id="how" class="section light fade-in">
     <div class="container">
       <h2>Як замовити</h2>
       <ol>
@@ -64,27 +87,20 @@
     </div>
   </section>
 
-  <footer id="contacts" class="footer">
+  <section id="about" class="section fade-in">
+    <div class="container">
+      <h2>Про нас</h2>
+      <p>HugRug — це бренд, який створює унікальні кастомні тафтингові килими. Ми працюємо вручну, любимо творчість і втілюємо ваші ідеї у текстилі.</p>
+    </div>
+  </section>
+
+  <footer id="contacts" class="footer fade-in">
     <div class="container">
       <p>© 2025 HugRug. Всі права захищені.</p>
       <a href="https://www.instagram.com/hugrug.store" target="_blank" class="btn orange">Instagram</a>
     </div>
   </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <script src="js/main.js"></script>
 </body>
 </html>
-
