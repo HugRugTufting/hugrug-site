@@ -1,112 +1,64 @@
 <!DOCTYPE html>
-
 <html lang="uk">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>HugRug — Тафтингові килими на замовлення</title>
-<meta content="Унікальні ручні тафтингові килими. Замовити через TikTok або Instagram. Ручна робота, яскраві дизайни, кастом під вас." name="description"/>
-<meta content="HugRug — Тафтингові килими на замовлення" property="og:title"/>
-<meta content="Створи свій унікальний килим. Анімешні, ігрові, мемні дизайни — на замовлення через TikTok або Instagram." property="og:description"/>
-<meta content="https://hugrug.store/preview.jpg" property="og:image"/>
-<meta content="https://hugrug.store" property="og:url"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="css/styles.css" rel="stylesheet"/>
-<script defer="" src="js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HugRug — Тафтингові килими на замовлення</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
 </head>
-<body>
-<!-- Hero -->
-<section class="hero">
-<div class="container">
-<button aria-label="Змінити тему" id="theme-toggle">🌙</button>
-<img alt="HugRug Logo" class="logo" src="images/logo.jpeg"/>
-<h1 class="title">HugRug</h1>
-<p class="subtitle">Унікальні тафтингові килими на замовлення</p>
-<a class="cta" href="https://www.tiktok.com/@hugrug" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.05)'" style="background: linear-gradient(90deg, #ff7e5f, #feb47b); color: white; border: none; padding: 12px 24px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease-in-out;" target="_blank">Замовити в TikTok</a>
-</div>
-</section>
-<!-- Navigation -->
-<nav class="nav">
-<a href="#works">Наші роботи</a>
-<a href="calculator.html">Калькулятор</a>
-<a href="#order">Як замовити</a>
-<a href="contact.html">Контакти</a>
-<a href="about.html">Про нас</a>
-</nav>
-<!-- Gallery -->
+<body class="theme-dark">
+  <header class="header">
+    <div class="container">
+      <img src="logo.png" alt="HugRug Logo" class="logo" />
+      <h1 class="title">HugRug</h1>
+      <p class="subtitle">Унікальні тафтингові килими на замовлення</p>
+      <div class="button-group">
+        <a href="https://www.tiktok.com/@hugrug" target="_blank" class="btn coral">TikTok</a>
+        <a href="#calculator" class="btn outline">Калькулятор</a>
+        <button id="toggle-theme" class="btn small">🌙</button>
+        <button id="toggle-mood" class="btn small mood">🎨</button>
+      </div>
+    </div>
+  </header>
 
-<!-- TikTok Embed -->
-<!--
-<section class="section">
-<div class="container">
-<h2 class="section-title">Як ми створюємо килими</h2>
-<blockquote cite="" class="tiktok-embed" data-video-id="" style="max-width: 605px;min-width: 325px;">
-<section><a href="#" target="_blank" title="@hugrug">@hugrug</a></section>
-</blockquote>
-</div>
-</section>
--->
-<!-- Testimonials -->
-<section class="section section-alt">
-<div class="container">
-<h2 class="section-title">Що кажуть наші клієнти</h2>
-<blockquote>“Килим просто вау! Ідеально підійшов у кімнату.” — Олена</blockquote>
-<blockquote>“Дякую за індивідуальний підхід! Дуже якісно.” — Андрій</blockquote>
-</div>
-</section>
+  <nav class="nav">
+    <a href="#gallery">Наші роботи</a>
+    <a href="#calculator">Калькулятор</a>
+    <a href="#how">Як замовити</a>
+    <a href="#contacts">Контакти</a>
+    <a href="#about">Про нас</a>
+  </nav>
 
-<!-- Order Process -->
-<section class="section section-alt" id="order">
-<div class="container">
-<h2 class="section-title">Як замовити</h2>
-<div class="steps">
-<div class="step"><span>🎨</span><h3>1. Ідея</h3><p>Надсилаєш референс або свою ідею</p></div>
-<div class="step"><span>💬</span><h3>2. Обговорення</h3><p>Погоджуємо деталі та ціну</p></div>
-<div class="step"><span>🧵</span><h3>3. Виготовлення</h3><p>До 7 днів на створення</p></div>
-<div class="step"><span>📦</span><h3>4. Доставка</h3><p>Нова Пошта по Україні</p></div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="footer" id="contact">
-<div class="container">
-<h2>Зв'язатися з нами</h2>
-<p>Ми активні в соцмережах:</p>
-<div class="social-links">
-<a href="https://www.tiktok.com/@hugrug">TikTok</a>
-<a href="https://www.instagram.com/hugrug.ua/">Instagram</a>
-<a href="https://www.facebook.com/hug.rug.2025/">Facebook</a>
-</div>
-<p class="copyright">© 2025 HugRug</p>
-</div>
-</footer>
-<!-- Floating Instagram Button -->
-<a aria-label="Написати в Instagram" class="floating-btn" href="https://www.instagram.com/hugrug.ua/" target="_blank">Instagram 📩</a>
-<script>
-    const tiktokVideos = [
-      "7516940734688136453",
-      "7508842243000634629",
-      "7502556678588468486",
-      "7521849080717249797",
-      "7521418279102074168",
-      "7509542516094520632",
-      "7501015018851421445",
-      "7509843810046774534"
-    ];
+  <section id="reviews" class="section">
+    <div class="container">
+      <h2>Що кажуть наші клієнти</h2>
+      <div class="reviews">
+        <blockquote>"Килим просто вау! Ідеально підійшов у кімнату." — Олена</blockquote>
+        <blockquote>"Дякую за індивідуальний підхід! Дуже якісно." — Андрій</blockquote>
+      </div>
+    </div>
+  </section>
 
-    const randomId = tiktokVideos[Math.floor(Math.random() * tiktokVideos.length)];
-    const embedContainer = document.querySelector(".tiktok-embed");
-    embedContainer.setAttribute("data-video-id", randomId);
-    embedContainer.setAttribute("cite", `https://www.tiktok.com/@hugrug/video/${randomId}`);
-    embedContainer.innerHTML = `
-      <section>
-        <a target="_blank" title="@hugrug" href="https://www.tiktok.com/@hugrug/video/${randomId}">@hugrug</a>
-      </section>
-    `;
-    const script = document.createElement("script");
-    script.src = "https://www.tiktok.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-  </script>
-<div style="text-align:center; padding:40px; font-size:1.2rem; color:#555;">🔧 Галерея в оновленні. Скоро додамо нові абстрактні дизайни 👇</div></body>
+  <section id="how" class="section light">
+    <div class="container">
+      <h2>Як замовити</h2>
+      <ol>
+        <li>Залишаєте заявку в Instagram або на сайті</li>
+        <li>Узгоджуємо дизайн, розмір, ціну</li>
+        <li>Ми виготовляємо ваш килим</li>
+        <li>Відправка Новою поштою по всій Україні</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer id="contacts" class="footer">
+    <div class="container">
+      <p>© 2025 HugRug. Всі права захищені.</p>
+      <a href="https://www.instagram.com/hugrug.store" target="_blank" class="btn orange">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
