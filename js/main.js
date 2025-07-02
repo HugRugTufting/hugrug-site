@@ -1,11 +1,14 @@
-
+// main.js — HugRug сайт
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("HugRug JS connected");
+
   const body = document.body;
   const themeToggle = document.getElementById("toggle-theme");
   const moodToggle = document.getElementById("toggle-mood");
 
   const moods = ["mood-mint", "mood-coral", "mood-pastel", "mood-gray"];
 
+  // === Завантаження теми і настрою
   function loadTheme() {
     const savedTheme = localStorage.getItem("theme");
     const savedMood = localStorage.getItem("mood");
@@ -21,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  loadTheme();
+
+  // === Перемикач теми
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
       body.classList.toggle("theme-light");
@@ -28,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // === Перемикач настрою
   if (moodToggle) {
     moodToggle.addEventListener("click", () => {
       moods.forEach(m => body.classList.remove(m));
@@ -37,5 +44,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  loadTheme();
+  // === Анімація fade-in з затримкою
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach((el, index) => {
+    el.style.transitionDelay = `${index * 100}ms`;
+    observer.observe(el);
+  });
+
+  // === Заглушка для форм
+  document.querySelectorAll("form").forEach(form => {
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      alert("Форма поки що не обробляється 😄");
+    });
+  });
 });
