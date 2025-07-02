@@ -1,68 +1,37 @@
-// main.js — HugRug сайт
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("HugRug JS connected");
+  const body = document.body;
+  const themeToggle = document.getElementById("toggle-theme");
+  const moodToggle = document.getElementById("toggle-mood");
+  const moods = ["mood-mint", "mood-coral", "mood-pastel", "mood-gray"];
 
- const body = document.body;
-const themeToggle = document.getElementById("toggle-theme");
-const moodToggle = document.getElementById("toggle-mood");
-
-const moods = ["mood-mint", "mood-coral", "mood-pastel", "mood-gray"];
-
-function loadTheme() {
-  const savedTheme = localStorage.getItem("theme");
-  const savedMood = localStorage.getItem("mood");
-
-  if (savedTheme === "light") {
-    body.classList.add("theme-light");
-  } else {
-    body.classList.remove("theme-light");
+  function loadTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    const savedMood = localStorage.getItem("mood");
+    if (savedTheme === "light") {
+      body.classList.add("theme-light");
+    } else {
+      body.classList.remove("theme-light");
+    }
+    if (moods.includes(savedMood)) {
+      body.classList.add(savedMood);
+    }
   }
 
-  if (moods.includes(savedMood)) {
-    body.classList.add(savedMood);
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      body.classList.toggle("theme-light");
+      localStorage.setItem("theme", body.classList.contains("theme-light") ? "light" : "dark");
+    });
   }
-}
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("theme-light");
-    localStorage.setItem("theme", body.classList.contains("theme-light") ? "light" : "dark");
-  });
-}
-
-if (moodToggle) {
-  moodToggle.addEventListener("click", () => {
-    moods.forEach(m => body.classList.remove(m));
-    const newMood = moods[Math.floor(Math.random() * moods.length)];
-    body.classList.add(newMood);
-    localStorage.setItem("mood", newMood);
-  });
-}
-
-loadTheme();
-document.body.classList.add("loaded");
-
-  // === Анімація fade-in з затримкою
-  const elements = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
+  if (moodToggle) {
+    moodToggle.addEventListener("click", () => {
+      moods.forEach(m => body.classList.remove(m));
+      const newMood = moods[Math.floor(Math.random() * moods.length)];
+      body.classList.add(newMood);
+      localStorage.setItem("mood", newMood);
     });
-  }, { threshold: 0.1 });
+  }
 
-  elements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 100}ms`;
-    observer.observe(el);
-  });
-
-  // === Заглушка для форм
-  document.querySelectorAll("form").forEach(form => {
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      alert("Форма поки що не обробляється 😄");
-    });
-  });
+  loadTheme();
 });
