@@ -20,6 +20,9 @@ h1, h2, h3 {
 
 /* === ШАПКА === */
 .header {
+  background-image: url(../images/header1.png);
+  height: 100vh;
+  background-size: cover;
   background: #141414;
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -169,3 +172,4 @@ body.mood-gray {
   background: #1c1c1c;
   color: #eee;
 }
+
