@@ -38,7 +38,8 @@ body.mood-gray {
   padding: 2rem 1rem;
 }
 .logo {
-  width: 264px;
+  margin-top: 5%;
+  width: 400px;
   height: auto;
 }
 .btn {
@@ -90,4 +91,72 @@ body.mood-gray {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.hugrug-navbar {
+  background: #111;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-logo {
+  height: 48px;
+  width: auto;
+}
+.nav-title .brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+}
+.nav-title .brand-subtitle {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+.nav-links a {
+  color: #fff;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+.nav-social a {
+  margin-left: 0.8rem;
+}
+.nav-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(90%);
+  transition: filter 0.3s;
+}
+.nav-social img:hover {
+  filter: brightness(130%);
+}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links, .nav-social {
+    margin-top: 0.5rem;
+  }
 }
