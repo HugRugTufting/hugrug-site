@@ -169,24 +169,22 @@ body.mood-gray {
 /* Swiper container */
 .swiper {
   width: 100%;
-  max-width: 1000px;
-  height: auto;
-  margin: 0 auto;
-  padding-bottom: 50px;
+  padding: 40px 0;
 }
-
-/* Swiper slides */
 .swiper-slide {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* Images inside slides */
-.swiper-slide img {
-  max-width: 100%;
+.top_logo {
+   margin-top: 15%;
+  width: 400px;
   height: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

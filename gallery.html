@@ -6,118 +6,70 @@
   <title>HugRug — Тафтингові килими на замовлення</title>
   <meta name="description" content="Унікальні ручні тафтингові килими. Замовити індивідуальний дизайн через Instagram або TikTok.">
   <link rel="icon" href="favicon.ico" />
+  <!-- Основні стилі сайту -->
   <link rel="stylesheet" href="css/style.css" />
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
-
+  <!-- Swiper стилі -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="hugrug-navbar">
-  <div class="nav-container">
-    <div class="nav-left">
-      <img src="images/logo.png" alt="HugRug Logo" class="nav-logo" />
-      <div class="nav-title">
-        <span class="brand-name">HugRug</span>
-        <span class="brand-subtitle">тафтингові килими</span>
-      </div>
-    </div>
-    <nav class="nav-links">
-      <a href="#gallery">Наші роботи</a>
-      <a href="#how">Як замовити</a>
-      <a href="calculator.html">Calculator</a>
-      <a href="#contacts">Контакти</a>
-    </nav>
-    <div class="nav-social">
-      <a href="https://www.instagram.com/hugrug.ua/" target="_blank" title="Instagram">
-        <img src="images/icon-instagram.svg" alt="Instagram" />
-      </a>
-      <a href="https://www.tiktok.com/@hugrug" target="_blank" title="TikTok">
-        <img src="images/icon-tiktok.svg" alt="TikTok" />
-      </a>
-    </div>
-  </div>
+  <!-- Навігаційний хедер, опущено для стислості -->
+<div class="top_logo">
+  <a href="http://hugrug.store/" class="logo">
+   <img src="images/logo.png" alt="HugRug Logo" class="logo" />
+   </a>
 </div>
+  <!-- Карусель галереї -->
+  <section id="gallery" class="section">
     <div class="container">
-      <img src="images/logo.png" alt="HugRug Logo" class="logo" />
-      <h1 class="title">HugRug</h1>
-      <p class="subtitle">Унікальні тафтингові килими на замовлення</p>
-      <div class="button-group">
-        <a href="#contacts" class="btn coral">Замовити</a>
-        <!--<button id="toggle-theme" class="btn small">🌙</button>-->
-        <button id="toggle-mood" class="btn small mood">🎨</button>
-      </div>
-    </div>
-  </header>
-
-  <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"><path fill="#f6e6f7" d="M0,96L48,106.7C96,117,192,139,288,133.3C384,128,480,96,576,101.3C672,107,768,149,864,154.7C960,160,1056,128,1152,128C1248,128,1344,160,1392,176L1440,192V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0H0Z"/></svg>
-
- <div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="images/rug1.jpeg" alt="Rug 1"></div>
-    <div class="swiper-slide"><img src="images/rug2.jpeg" alt="Rug 2"></div>
-    <div class="swiper-slide"><img src="images/rug3.jpeg" alt="Rug 3"></div>
-    <div class="swiper-slide"><img src="images/rug4.jpeg" alt="Rug 4"></div>
-    <div class="swiper-slide"><img src="images/rug5.jpeg" alt="Rug 5"></div>
-  </div>
-
-  <!-- Optional navigation -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</div>
-
-
-
-
-
-
-  <section id="reviews" class="section">
-    <div class="container">
-      <h2>Що кажуть наші клієнти</h2>
-      <div class="reviews">
-        <blockquote>"Килим просто вау! Ідеально підійшов у кімнату." — Олена</blockquote>
-        <blockquote>"Дякую за індивідуальний підхід! Дуже якісно." — Андрій</blockquote>
+      <h2 class="section-title">Наші роботи</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/rug1.jpeg" alt="Rug 1"></div>
+          <div class="swiper-slide"><img src="images/rug2.jpeg" alt="Rug 2"></div>
+          <!-- <div class="swiper-slide"><img src="images/rug3.jpeg" alt="Rug 3"></div>
+          <div class="swiper-slide"><img src="images/rug4.jpeg" alt="Rug 4"></div>
+          <div class="swiper-slide"><img src="images/rug5.jpeg" alt="Rug 5"></div> -->
+        </div>
+        <!-- Стрілки навігації -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Пагінація -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
 
-  <section id="how" class="section light">
-    <div class="container">
-      <h2>Як замовити</h2>
-      <ol>
-        <li>Залишаєте заявку в Instagram або на сайті</li>
-        <li>Узгоджуємо дизайн, розмір, ціну</li>
-        <li>Ми виготовляємо ваш килим</li>
-        <li>Відправка Новою поштою по всій Україні</li>
-      </ol>
-    </div>
-  </section>
+  <!-- Інші секції сайту: відгуки, як замовити, контакти тощо -->
 
-  <footer id="contacts" class="footer">
-    <div class="container">
-      <p>© 2025 HugRug. Всі права захищені.</p>
-      <a href="https://www.instagram.com/hugrug.ua" target="_blank" class="btn orange">Instagram</a>
-    </div>
-  </footer>
-
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-      delay: 3000,
-    },
-  });
-</script>
-
-
+  <!-- Підключення Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Ініціалізація каруселі після завантаження DOM -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }
+      });
+    });
+  </script>
+  <!-- Основні скрипти сайту -->
   <script src="js/main.js"></script>
 </body>
 </html>
