@@ -39,3 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+
+// main.js additions for burger menu
+
+document.addEventListener('DOMContentLoaded', () => {
+  // ... existing theme/mood and Swiper code ...
+
+  // === Mobile Burger Menu ===
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navSocial = document.querySelector('.nav-social');
+
+  navToggle?.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navSocial.classList.toggle('open');
+    navToggle.classList.toggle('open');
+  });
+});
