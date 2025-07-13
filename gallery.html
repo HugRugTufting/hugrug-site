@@ -1,75 +1,94 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HugRug — Тафтингові килими на замовлення</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HugRug — Тафтингові килими</title>
   <meta name="description" content="Унікальні ручні тафтингові килими. Замовити індивідуальний дизайн через Instagram або TikTok.">
   <link rel="icon" href="favicon.ico" />
   <!-- Основні стилі сайту -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <!-- Swiper стилі -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-  <!-- Навігаційний хедер, опущено для стислості -->
-<div class="top_logo">
-  <a href="http://hugrug.store/" class="logo">
-   <img src="images/logo.png" alt="HugRug Logo" class="logo" />
-   </a>
-</div>
-  <!-- Карусель галереї -->
-  <section id="gallery" class="section">
+  <!-- Навігація -->
+  <header class="hugrug-navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-left logo-link">
+        <img src="images/logo.png" alt="HugRug Logo" class="nav-logo">
+        <div class="nav-title">
+          <span class="brand-name">HugRug</span>
+          <span class="brand-subtitle">тафтингові килими</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#gallery">Наші роботи</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#how">Як замовити</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+      <div class="nav-social">
+        <a href="https://www.instagram.com/hugrug.ua/" target="_blank">
+          <img src="images/icon-instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/@hugrug" target="_blank">
+          <img src="images/icon-tiktok.svg" alt="TikTok">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Галерея (Swiper) -->
+  <section id="gallery" class="section section--light">
     <div class="container">
       <h2 class="section-title">Наші роботи</h2>
-      <div class="swiper">
+      <div class="swiper gallery-swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="images/rug1.jpeg" alt="Rug 1"></div>
-          <div class="swiper-slide"><img src="images/rug2.jpeg" alt="Rug 2"></div>
-          <!-- <div class="swiper-slide"><img src="images/rug3.jpeg" alt="Rug 3"></div>
-          <div class="swiper-slide"><img src="images/rug4.jpeg" alt="Rug 4"></div>
-          <div class="swiper-slide"><img src="images/rug5.jpeg" alt="Rug 5"></div> -->
+          <div class="swiper-slide"><img src="images/rug1.jpeg" alt="Робота 1"></div>
+          <div class="swiper-slide"><img src="images/rug2.jpeg" alt="Робота 2"></div>
+          <div class="swiper-slide"><img src="images/rug3.jpeg" alt="Робота 3"></div>
+          <div class="swiper-slide"><img src="images/rug4.jpeg" alt="Робота 4"></div>
+          <div class="swiper-slide"><img src="images/rug5.jpeg" alt="Робота 5"></div>
         </div>
-        <!-- Стрілки навігації -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <!-- Пагінація -->
         <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
 
-  <!-- Інші секції сайту: відгуки, як замовити, контакти тощо -->
+  <!-- Секція калькулятора -->
+  <section id="calculator" class="section">
+    <div class="container">
+      <!-- Тут може бути ваша форма калькулятора -->
+    </div>
+  </section>
 
-  <!-- Підключення Swiper JS -->
+  <!-- Як замовити -->
+  <section id="how" class="section">
+    <div class="container">
+      <h2 class="section-title">Як замовити</h2>
+      <ol>
+        <li>Надсилаєте запит</li>
+        <li>Погоджуємо деталі</li>
+        <li>Виготовляємо килим</li>
+        <li>Доставка Новою Поштою</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacts" class="footer">
+    <div class="container">
+      <p>&copy; 2025 HugRug. Всі права захищені.</p>
+      <a href="https://www.instagram.com/hugrug.ua" target="_blank" class="btn orange">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Ініціалізація каруселі після завантаження DOM -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const swiper = new Swiper('.swiper', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        slidesPerView: 1,
-        spaceBetween: 20,
-        breakpoints: {
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 }
-        }
-      });
-    });
-  </script>
-  <!-- Основні скрипти сайту -->
-  <script src="js/main.js"></script>
+  <!-- Основний скрипт -->
+  <script src="js/main.js" defer></script>
 </body>
 </html>
