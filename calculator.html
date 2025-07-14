@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Розрахунок вартості | HugRug</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/calc.js" defer></script>
-</head>
-<body>
-  <section class="section" id="calculator">
-    <div class="container">
-      <h2 class="section-title">Розрахунок вартості килима</h2>
-      <form id="calcForm">
-        <label>
-          Довжина (см):
-          <input type="number" name="length" required min="10">
-        </label>
-        <label>
-          Ширина (см):
-          <input type="number" name="width" required min="10">
-        </label>
-        <label>
-          <input type="checkbox" name="complex">
-          Складний малюнок (+50%)
-        </label>
-        <label>
-          <input type="checkbox" name="design">
-          Індивідуальний дизайн (+20%)
-        </label>
-        <label>
-          <input type="checkbox" name="edge">
-          Обметка країв (+200 грн)
-        </label>
-        <label>
-          <input type="checkbox" name="delivery">
-          Доставка (+300 грн)
-        </label>
-        <button type="submit">Порахувати</button>
-      </form>
-      <div id="calcResult"></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розрахунок вартості | HugRug</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/calc.js" defer></script>
+  </head>
+  <body>
+    <header class="calc-bg">
+    <div class="hugrug-navbar">
+  <div class="nav-container">
+    <div class="nav-left">
+      <img src="images/logo.png" alt="HugRug Logo" class="nav-logo" />
+      <div class="nav-title">
+        <span class="brand-name">HugRug</span>
+        <span class="brand-subtitle">тафтингові килими</span>
+      </div>
+      <div class="nav-right">
+                    <!-- Burger toggle for mobile -->
+        <button id="nav-toggle" aria-label="Toggle navigation">
+          <span class="burger"></span>
+        </button>
+      </div>
     </div>
-  </section>
-</body>
+    <nav class="nav-links">
+      <a href="gallery.html">Наші роботи</a>
+      <a href="#how">Як замовити</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <div class="nav-social">
+
+      <a href="https://www.instagram.com/hugrug.ua/" target="_blank" title="Instagram">
+        <img src="images/icon-instagram.svg" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@hugrug" target="_blank" title="TikTok">
+        <img src="images/icon-tiktok.svg" alt="TikTok" />
+      </a>
+    </div>
+  </div>
+</div><section class="section" id="calculator">
+      <div class="container">
+        <h2 class="section-title">Розрахунок приблизної вартості килима</h2>
+        <form id="calcForm">
+          <label>
+            Довжина (см):
+            <input type="number" name="length" required min="10">
+          </label>
+          <label>
+            Ширина (см):
+            <input type="number" name="width" required min="10">
+          </label>
+          <label>
+            <input type="checkbox" name="complex">
+            Складний малюнок (+50%)
+          </label>
+          <label>
+            <input type="checkbox" name="design">
+            Індивідуальний дизайн (+20%)
+          </label>
+          <label>
+            <input type="checkbox" name="edge">
+            обробка країв лентою (+200 грн)
+          </label>
+          <label>
+            <input type="checkbox" name="delivery">
+            Доставка (+300 грн)
+          </label>
+          <button type="submit">Порахувати</button>
+        </form>
+        <div id="calcResult"></div>
+      </div>
+      <h4 class="section-title">Мінімальна ціна килима 900 грн </h4>
+    </section>
+  </header>
+    
+  </body>
 </html>

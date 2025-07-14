@@ -38,6 +38,15 @@ body.mood-gray {
   text-align: center;
   padding: 2rem 0;
 }
+.calc-bg {
+  background-color: #444;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 5rem 0;
+}
+
 .logo {
   margin-top: 5%;
   width: 300px;
@@ -303,3 +312,402 @@ body.mood-gray {
   }
 }
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0e0e;
+  color: #f1f1f1;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+body.theme-light {
+  background-color: #fefefe;
+  color: #111;
+}
+body.mood-mint {
+  background-color: #222222;
+  color: #e9fef5;
+}
+body.mood-coral {
+  background-color: #141f1f;
+  color: #fff0f0;
+}
+body.mood-pastel {
+  background-color: #f6e6f7;
+  color: #2d2d2d;
+}
+body.mood-gray {
+  background-color: #141816;
+  color: #eee;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+.header {
+  background-image: url(../images/header1.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+.logo {
+  margin-top: 5%;
+  width: 300px;
+  max-width: 80%;
+  height: auto;
+  cursor: pointer;
+}
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0.2rem;
+  transition: background-color 0.3s;
+}
+.btn.small {
+  padding: 0.3rem 0.6rem;
+}
+.btn.coral {
+  background: #ff6b6b;
+  color: white;
+}
+.btn.coral:hover {
+  background: #e05555;
+}
+.btn.orange {
+  background: #ff934f;
+  color: white;
+}
+.btn.orange:hover {
+  background: #e57a3c;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  background: #1a1a1a;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #ff6b6b;
+}
+.section {
+  padding: 3rem 1rem;
+}
+.section.light {
+  background: #1e1e1e;
+}
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #0c0c0c;
+}
+.wave {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hugrug-navbar {
+  background: #111;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-logo {
+  height: 48px;
+  width: auto;
+  cursor: pointer;
+}
+.nav-title .brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: block;
+}
+.nav-title .brand-subtitle {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+.nav-links a {
+  color: #fff;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff6b6b;
+}
+.nav-social a {
+  margin-left: 0.8rem;
+}
+.nav-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(90%);
+  transition: filter 0.3s;
+}
+.nav-social img:hover {
+  filter: brightness(130%);
+}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links, .nav-social {
+    margin-top: 0.5rem;
+  }
+}
+
+.icon {
+  color: #2196f3;
+}
+
+/* Swiper container */
+.swiper {
+  width: 100%;
+  padding: 40px 0;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  max-height: 400px;
+}
+
+.top_logo {
+  margin-top: 15%;
+  width: 400px;
+  height: auto;
+}
+
+
+
+/* Приховуємо навігацію під час мобільного перегляду */
+.nav-links, .nav-social {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-social {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 1rem;
+  }
+  .nav-links.open, .nav-social.open {
+    display: flex;
+  }
+  #nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+#nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    /* style.css additions for burger menu */
+
+/* Burger toggle button */
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+#nav-toggle .burger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#nav-toggle .burger::before,
+#nav-toggle .burger::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: currentColor;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+#nav-toggle .burger::before { top: -8px; }
+#nav-toggle .burger::after { top: 8px; }
+
+/* Active (open) state */
+#nav-toggle.open .burger { background: transparent; }
+#nav-toggle.open .burger::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#nav-toggle.open .burger::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  /* Show burger on mobile */
+  #nav-toggle { display: block; color: #fff; }
+  /* Hide nav items until toggled */
+  .nav-links,
+  .nav-social {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  /* When open */
+  .nav-links.open,
+  .nav-social.open {
+    display: flex;
+  }
+}
+
+
+/* ============================= */
+/*  СТИЛІ ДЛЯ РОЗДІЛУ «КАЛЬКУЛЯТОР»  */
+/* ============================= */
+
+#calculator {
+  background: #1e1e1e; /* та сама сіренька секційна заливка */
+  padding: 3rem 1rem;
+}
+
+#calculator .container {
+  max-width: 600px;
+  margin: auto;
+  background: #222;            /* відтінок карточки */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+#calculator .section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #f1f1f1;
+}
+
+#calcForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+#calcForm label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #ddd;
+}
+
+#calcForm label > input[type="number"] {
+  flex: 1;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #f1f1f1;
+}
+
+#calcForm label > input[type="checkbox"] {
+  margin: 0 0.5rem 0 0;
+  transform: scale(1.2);
+}
+
+#calcForm .full-width {
+  grid-column: 1 / -1;
+}
+
+#calcForm button {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#calcForm button:hover {
+  background: #e05555;
+}
+
+#calcResult {
+  margin-top: 1.5rem;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #f1f1f1;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+#calcResult p {
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  #calcForm {
+    grid-template-columns: 1fr;
+  }
+}

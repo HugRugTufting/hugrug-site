@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const width = parseFloat(form.width.value);
     const area = (length * width) / 10000; // м²
 
-    let pricePerM2 = 1500; // базова ціна за м²
+    let pricePerM2 = 2500; // базова ціна за м²
     let total = area * pricePerM2;
 
     if (form.complex.checked) total *= 1.5;
