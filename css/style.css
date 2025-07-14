@@ -711,3 +711,56 @@ body.mood-gray {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ============================= */
+/*  СТИЛІ ДЛЯ СТОРІНКИ “ПРО НАС” */
+/* ============================= */
+.about-hero {
+  background: linear-gradient(135deg, #123b38, #496661);
+  text-align: center;
+  padding: 6rem 1rem;
+}
+.about-hero .title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.about-hero .subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.about-section {
+  padding: 4rem 1rem;
+}
+.about-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+}
+.about-section p,
+.about-section ul {
+  max-width: 800px;
+  margin: auto;
+  color: #ddd;
+  line-height: 1.7;
+}
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+.about-section ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+.about-section ul li::before {
+  content: '🔹';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+}
