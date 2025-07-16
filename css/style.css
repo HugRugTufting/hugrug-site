@@ -878,3 +878,56 @@ body.mood-gray {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ============================= */
+/*  Центрування і стилізація соцмереж у картці */
+/* ============================= */
+.contact-cards {
+  /* вирівняти всі картки по центру ряду */
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-cards .card:first-child {
+  /* зробимо ширину трохи менше, щоб список був компактний */
+  max-width: 260px;
+  text-align: center;
+}
+
+.contact-cards .card:first-child .social-list {
+  /* стовпчик без стандартних маркерів, центрування */
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto 0;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+}
+
+.contact-cards .card:first-child .social-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-cards .card:first-child .social-list li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-cards .card:first-child .social-list li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.contact-cards .card:first-child .social-list li a:hover {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+}
