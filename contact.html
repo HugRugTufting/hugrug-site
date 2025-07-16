@@ -7,30 +7,35 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js" defer></script>
+  
 </head>
 <body>
   <!-- Верхня навігація -->
   <header class="hugrug-navbar">
-    <div class="nav-container">
-      <div class="nav-left">
-        <a href="index.html">
-          <img src="images/logo.png" alt="HugRug Logo" class="nav-logo" />
-        </a>
-        <div class="nav-title">
-          <span class="brand-name">HugRug</span>
-          <span class="brand-subtitle">тафтингові килими</span>
-        </div>
+    <div class="hugrug-navbar">
+  <div class="nav-container">
+    <div class="nav-left">
+      <img src="images/logo.png" alt="HugRug Logo" class="nav-logo" />
+      <div class="nav-title">
+        <span class="brand-name">HugRug</span>
+        <span class="brand-subtitle">тафтингові килими</span>
       </div>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Відкрити меню">☰</button>
-   <nav class="nav-links">
+      <div class="nav-right">
+    <!-- Burger toggle for mobile -->
+        <button id="nav-toggle" aria-label="Toggle navigation">
+        <span class="burger"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-links">
       <a href="index.html">Головна сторінка</a>
       <a href="gallery.html">Наші роботи</a>
       <a href="calculator.html">Калькулятор</a>
       <a href="about.html">Про нас</a>
     </nav>
-      <div class="nav-social">
-        <a href="https://www.tiktok.com/@hugrug" target="_blank" title="TikTok">
+    <div class="nav-social">
+
+       <a href="https://www.tiktok.com/@hugrug" target="_blank" title="TikTok">
           <img src="images/icon-tiktok.svg" alt="TikTok" />
         </a>
         <a href="https://www.instagram.com/hugrug.ua" target="_blank" title="Instagram">
@@ -42,8 +47,9 @@
         <a href="https://www.linkedin.com/in/hugrug-tufting-95a8ba361/" target="_blank" title="LinkedIn">
           <img src="images/icon-linkedin.svg" alt="LinkedIn" />
         </a>
-      </div>
     </div>
+  </div>
+</div>
   </header>
 
   <!-- Hero секція -->
@@ -105,15 +111,6 @@
     </div>
   </footer>
 
-  <script>
-    // Бургер-меню
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.querySelector('.nav-links');
-    const socials = document.querySelector('.nav-social');
-    toggle.addEventListener('click', ()=>{
-      links.classList.toggle('open');
-      socials.classList.toggle('open');
-    });
-  </script>
+ <script src="js/main.js"></script>
 </body>
 </html>
