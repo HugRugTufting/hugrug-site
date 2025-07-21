@@ -59,8 +59,21 @@
             <input type="number" name="width" required min="10">
           </label>
           <label>
-            <input type="checkbox" name="complex">
-            Складний малюнок (більше двох кольорів) (+50%)
+            Форма килима:
+            <select name="shape" required>
+              <option value="rectangle">Прямокутний</option>
+              <option value="round">Круглий</option>
+              <option value="square">Квадратний</option>
+              <option value="runner">Runner (довгий)</option>
+            </select>
+          </label>
+          <label>
+            Складність дизайну:
+            <select name="complexity" required>
+              <option value="simple">Простий (1800 грн/м²)</option>
+              <option value="medium" selected>Середній (2300 грн/м²)</option>
+              <option value="complex">Складний (2900 грн/м²)</option>
+            </select>
           </label>
           <label>
             <input type="checkbox" name="design">
@@ -68,7 +81,7 @@
           </label>
           <label>
             <input type="checkbox" disabled checked name="edge">
-            обробка країв лентою (+200 грн)
+            Обробка країв лентою (+200 грн)
           </label>
           <label>
             <input type="checkbox" disabled checked name="delivery">
@@ -76,6 +89,7 @@
           </label>
           <button type="submit">Порахувати</button>
         </form>
+
         <div id="calcResult"></div>
       </div>
       <h4 class="section-title">Мінімальна ціна килима 900 грн </h4>
