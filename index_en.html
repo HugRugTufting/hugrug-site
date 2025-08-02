@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HugRug — Тафтингові килими на замовлення</title>
+  <title>HugRug — Custom Tufted Rugs</title>
   <meta name="description" content="Унікальні ручні тафтингові килими. Замовити індивідуальний дизайн через Instagram або TikTok.">
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="gallery.html" />
-
- 
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
   <header class="header">
     <div class="hugrug-navbar">
   <div class="nav-container">
+          <div class="lang-switcher">
+              <a href="index.html" class="lang">UA</a>
+              <span>|</span>
+              <a href="index_en.html" class="lang">EN</a>
+          </div>
     <div class="nav-left">
       <img src="images/logo.png" alt="HugRug Logo" class="nav-logo" />
       <div class="nav-title">
         <span class="brand-name">HugRug</span>
-        <span class="brand-subtitle">тафтингові килими</span>
+        <span class="brand-subtitle">Custom Tufted Rugs</span>
       </div>
       <div class="nav-right">
                     <!-- Burger toggle for mobile -->
@@ -30,11 +32,11 @@
       </div>
     </div>
     <nav class="nav-links">
-      <a href="index.html">Головна сторінка</a>
-      <a href="gallery.html">Наші роботи</a>
-      <a href="calculator.html">Калькулятор</a>
-      <a href="contact.html">Контакти</a>
-      <a href="about.html">Про нас</a>
+      <a href="index.html">Home page</a>
+      <a href="gallery.html">Our works</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="contact.html">Contacts</a>
+      <a href="about.html">About us</a>
     </nav>
     <div class="nav-social">
 
@@ -56,9 +58,9 @@
     <div class="container">
       <img src="images/logo.png" alt="HugRug Logo" class="logo" />
       <h1 class="title">HugRug</h1>
-      <p class="subtitle">Унікальні тафтингові килими на замовлення</p>
+      <p class="subtitle">Unique custom tufted rugs</p>
       <div class="button-group">
-        <a href="#contacts" class="btn coral">Замовити</a>
+        <a href="#contacts" class="btn coral">Order now</a>
         <!--<button id="toggle-theme" class="btn small">🌙</button>-->
         <button id="toggle-mood" class="btn small mood">🎨</button>
       </div>
@@ -88,23 +90,23 @@
 
   <section id="reviews" class="section">
     <div class="container">
-      <h2>Що кажуть наші клієнти</h2>
+      <h2>What our customers say</h2>
       <div class="reviews">
-        <blockquote>"Килим просто вау! Ідеально підійшов у кімнату." — Олена</blockquote>
-        <blockquote>"Дякую за індивідуальний підхід! Дуже якісно." — Анатолій</blockquote>
+        <blockquote>"The rug is just WOW! Fits perfectly in the room." — Olena</blockquote>
+        <blockquote>"Thank you for the individual approach! Very high quality." — Anatolii</blockquote>
       </div>
     </div>
   </section>
 
   <section id="how" class="section light">
     <div class="container">
-      <h2>Як замовити</h2>
-      <ol>
-        <li>Залишаєте заявку в Instagram або на сайті</li>
-        <li>Узгоджуємо дизайн, розмір, ціну</li>
-        <li>Ми виготовляємо ваш килим</li>
-        <li>Відправка Новою поштою по всій Україні</li>
-      </ol>
+      <h2>How to order</h2>
+        <ol>
+          <li>Submit a request on Instagram or website</li>
+          <li>We confirm design, size, price</li>
+          <li>We make your rug</li>
+          <li>Delivery by Nova Poshta across Ukraine</li>
+        </ol>
     </div>
   </section>
 
@@ -119,7 +121,12 @@
 
 
 
-  
+
+  <script>
+  if (navigator.language.startsWith('en')) {
+    window.location.href = "index_en.html";
+  }
+</script>
   <script src="js/main.js"></script>
 </body>
 </html>

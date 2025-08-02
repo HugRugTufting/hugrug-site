@@ -134,6 +134,24 @@ body.mood-gray {
   align-items: center;
   padding: 0 2rem;
 }
+
+.lang-switcher {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+.lang-switcher a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+.lang-switcher a:hover {
+  color: #ff6b6b;
+}
+.lang-switcher span {
+  color: #888;
+}
+
+
 .nav-left {
   display: flex;
   align-items: center;
@@ -717,6 +735,11 @@ body.mood-gray {
   opacity: 0.5; /* або 0, щоб було невидимим */
 }
 
+
+.hiden-input {
+   pointer-events: none;
+  opacity: 0.5; /* або 0, щоб було невидимим */
+}
 /* ============================= */
 /*  СТИЛІ ДЛЯ СТОРІНКИ “ПРО НАС” */
 /* ============================= */
